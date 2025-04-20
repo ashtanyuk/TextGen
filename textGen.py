@@ -75,7 +75,7 @@ model = Sequential()
 model.add(LSTM(128, input_shape =(max_length, len(vocabulary))))
 model.add(Dense(len(vocabulary)))
 model.add(Activation('softmax'))
-optimizer = RMSprop(lr = 0.01)
+optimizer = RMSprop(learning_rate=0.01)
 model.compile(loss ='categorical_crossentropy', optimizer = optimizer)
 print(model.summary())
 
